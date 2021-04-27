@@ -2,7 +2,7 @@
   "name": "nodejs-web",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "build/App.js",
   "scripts": {
     "tsc": "tsc",
     "start": "tsc && node ./build/app.js",
