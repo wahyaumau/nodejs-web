@@ -29,3 +29,13 @@ docker login --username=<dockerhub_username>
 ```bash
 docker push <dockerhub_username>/nodejs-web
 ```
+
+## Deploy Docker Image from Dockerhub to Kubernetes Cluster
+```bash
+kubectl apply -f k8s-deployment.yml
+```
+
+## Access Kubernetes Service from Browser
+```bash
+minikube service nodejs-web-service
+```
