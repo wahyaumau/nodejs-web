@@ -19,3 +19,13 @@ docker build . -t <dockerhub_username>/nodejs-web
 ```bash
 docker run --rm --name nodejs-web-container -p 30001:30001 <dockerhub_username>/nodejs-web:latest
 ```
+
+## Login to Dockerhub
+```bash
+docker login --username=<dockerhub_username>
+```
+
+## Push Image to Dockerhub
+```bash
+docker push <dockerhub_username>/nodejs-web
+```
