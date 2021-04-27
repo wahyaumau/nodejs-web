@@ -1,0 +1,7 @@
+application:
+  name: nodejs-web
+  express:
+    host: http://localhost
+    port: 30001
+  logger:
+    level: "ALL"
