@@ -18,7 +18,6 @@ spec:
       containers:
         - name: nodejs-web
           image: 245547/nodejs-web:latest
-          imagePullPolicy: Always
           ports:
             - containerPort: 30001
 
