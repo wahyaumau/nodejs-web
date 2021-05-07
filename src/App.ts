@@ -35,6 +35,9 @@ const main = async() => {
     app.get('/newww', (req: Request, res: Response) => {
       res.json({"message": "newww", "status": 200});      
     });
+    app.get('/last_new', (req: Request, res: Response) => {
+      res.json({"message": "last_new", "status": 200});      
+    });
     
     app.use((req: Request, res: Response) => {
       res.status(404).json({"message": `route ${req.originalUrl} not found`, "status": 404});
