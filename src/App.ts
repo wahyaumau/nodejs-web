@@ -11,11 +11,30 @@ const main = async() => {
       LogUtil.logger.info(req.protocol + '://' + req.hostname + req.originalUrl);
       next();
     });    
-    app.get('', (req: Request, res: Response) => {
+    app.get('/', (req: Request, res: Response) => {
       res.json({"message": "on", "status": 200});      
     });
     app.get('/hello', (req: Request, res: Response) => {
       res.json({"message": "hello", "status": 200});      
+    });
+    app.get('/new', (req: Request, res: Response) => {
+      res.json({"message": "new", "status": 200});      
+    });
+    app.get('/newer', (req: Request, res: Response) => {
+      res.json({"message": "newer", "status": 200});      
+    });
+    app.get('/recent', (req: Request, res: Response) => {
+      res.json({"message": "recent", "status": 200});      
+    });
+    app.get('/newest', (req: Request, res: Response) => {
+      res.json({"message": "newest", "status": 200});      
+    });
+    app.get('/newest_route', (req: Request, res: Response) => {
+      res.json({"message": "newest_route", "status": 200});      
+    });
+    
+    app.use((req: Request, res: Response) => {
+      res.status(404).json({"message": `route ${req.originalUrl} not found`, "status": 404});
     });
     app.listen(EXPRESS_CONFIG.port, () => {    
       LogUtil.logger.info(`Listening on ${EXPRESS_CONFIG.host}:${EXPRESS_CONFIG.port}`);
