@@ -5,7 +5,7 @@ metadata:
   labels:
     name: nodejs-web
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       name: nodejs-web
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: nodejs-web
-          image: 245547/nodejs-web
+          image: 245547/nodejs-web:latest
           ports:
             - containerPort: 30001
 
